@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FOOD MENU</title>
+    <link rel="icon" href="images/quotations-button.png" type="image/x-icon">
+</head>
+
+<body>
+    <header class="top-navbar">
+        <div class="nav">
+            <div class="logo">
+                <li><a class="nav-link" href="index.html"><img src="./images/tab-icon-03.png" alt="icon"></a></li>
+                <h1>Herbivore &nbsp;<b>Haven</b></h1>
+            </div>
+            <ul>
+                <li><a class="nav-link" href="index.html">HOME</a></li>
+                <li><a class="nav-link" href="menu.html">MENU</a></li>
+                <li><a class="nav-link" href="reservation.html">RESERVATION</a></li>
+                <li><a class="nav-link" href="service.html">SERVICE</a></li>
+                <li><a class="nav-link" href="about.html">ABOUT US</a></li>
+                <li><a class="nav-link" href="contact.html">CONTACT</a></li>
+            </ul>
+            <div class="user-menu">
+                <img src="./images/avt-img.jpg" alt="User Icon" class="user-icon">
+                <div class="dropdown-menu">
+                    <a href="#" onclick="showUserOrders()">Order Details</a>
+                    <a href="#" onclick="showUserBookings()">Reservation</a>
+                    <a href="login.html">Logout</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Start All Pages -->
+    <div class="all-page-title page-breadcrumb">
+        <div class="container text-center">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1>Special Menu</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End All Pages -->
+
+    <!-- Start Menu -->
+    <div class="containers">
+        <nav class="sidebar">
+            <ul>
+                <li class="filter active" data-filter="all">All</li>
+                <li class="filter" data-filter="drinks">Drinks</li>
+                <li class="filter" data-filter="lunch">Lunch</li>
+                <li class="filter" data-filter="dinner">Dinner</li>
+            </ul>
+        </nav>
+        <div class="main-content show-all">
+            <div class="item drinks" onclick="openModal('paymentModal', 'Special Drinks', '₹155')">
+                <div class="overlay">
+                    <h3>Special Drinks</h3>
+                    <span style="color: red;">Order Now</span>
+                    <div class="price">₹155</div>
+                </div>
+                <img src="images/img-01.jpg" class="img-fluids" alt="Food 1">
+            </div>
+
+            <div class="item drinks">
+                <div class="overlay" onclick="openModal('paymentModal', 'Special Drinks1', '₹116')">
+                    <h3>Special Drinks1</h3>
+                    <span style="color: red;">Order Now</span>
+                    <div class="price">₹116</div>
+                </div>
+                <img src="images/img-02.jpg" class="img-fluids" alt="Food 2">
+            </div>
+
+            <div class="item drinks">
+                <div class="overlay" onclick="openModal('paymentModal', 'Special Drinks2', '₹132')">
+                    <h3>Special Drinks2</h3>
+                    <span style="color: red;">Order Now</span>
+                    <div class="price">₹132</div>
+                </div>
+                <img src="images/tab-item-02.png" class="img-fluids" alt="Food 3">
+            </div>
+            <div class="item lunch">
+                <div class="overlay" onclick="openModal('paymentModal', 'Special Lunch', '₹279')">
+                    <h3>Special Lunch</h3>
+                    <span style="color: red;">Order Now</span>
+                    <div class="price">₹279</div>
+                </div>
+                <img src="images/img-04.jpg" class="img-fluids" alt="Food 4">
+            </div>
+            <div class="item lunch">
+                <div class="overlay" onclick="openModal('paymentModal', 'Special Lunch1', '₹399')">
+                    <h3>Special Lunch1</h3>
+                    <span style="color: red;">Order Now</span>
+                    <div class="price">₹399</div>
+                </div>
+                <img src="images/img-05.jpg" class="img-fluids" alt="Food 5">
+            </div>
+            <div class="item lunch">
+                <div class="overlay" onclick="openModal('paymentModal', 'Special Lunch2', '₹299')">
+                    <h3>Special Lunch2</h3>
+                    <span style="color: red;">Order Now</span>
+                    <div class="price">₹299</div>
+                </div>
+                <img src="images/img-06.jpg" class="img-fluids" alt="Food 6">
+            </div>
+            <div class="item dinner">
+                <div class="overlay" onclick="openModal('paymentModal', 'Special Dinner', '₹599')">
+                    <h3>Special Dinner</h3>
+                    <span style="color: red;">Order Now</span>
+                    <div class="price">₹599</div>
+                </div>
+                <img src="images/img-07.jpg" class="img-fluids" alt="Food 7">
+            </div>
+            <div class="item dinner">
+                <div class="overlay" onclick="openModal('paymentModal', 'Special Dinner1', '₹499')">
+                    <h3>Special Dinner1</h3>
+                    <span style="color: red;">Order Now</span>
+                    <div class="price">₹499</div>
+                </div>
+                <img src="images/img-08.jpg" class="img-fluids" alt="Food 8">
+            </div>
+            <div class="item dinner">
+                <div class="overlay" onclick="openModal('paymentModal', 'Special Dinner2', '₹459')">
+                    <h3>Special Dinner2</h3>
+                    <span style="color: red;">Order Now</span>
+                    <div class="price">₹459</div>
+                </div>
+                <img src="images/img-09.jpg" class="img-fluids" alt="Food 9">
+            </div>
+        </div>
+    </div>
+
+    <!-- Payment Modal -->
+    <div id="paymentModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('paymentModal')">&times;</span>
+            <h2 class="payment">Payment Details</h2>
+            <form id="paymentForm" onsubmit="submitPaymentForm(event)">
+                <div class="form-group">
+                    <label for="orderName">Order Name*</label>
+                    <input type="text" id="orderName" name="orderName" readonly>
+                </div>
+                <div class="form-group">
+                    <label for="price">Price*</label>
+                    <input type="text" id="price" name="price" readonly>
+                </div>
+                <div class="form-group">
+                    <label for="address">Address*</label>
+                    <input type="text" id="address" name="address" required>
+                </div>
+                <div class="form-group">
+                    <label for="landmark">Landmark*</label>
+                    <input type="text" id="landmark" name="landmark" required>
+                </div>
+                <div class="form-group">
+                    <label for="cash">Payment Method*</label>
+                    <select id="cash" name="cash" onchange="toggleOnlinePaymentOptions(this.value)" required>
+                        <option value="cod">Cash on Delivery</option>
+                        <option value="online">Online Payment</option>
+                    </select>
+                </div>
+                <div id="onlinePaymentOptions" class="form-group" style="display: none;">
+                    <label for="onlinePayment">Select Online Payment Method*</label>
+                    <select id="onlinePayment" name="onlinePayment" required>
+                        <option value="googlepay">Google Pay</option>
+                        <option value="paytm">Paytm</option>
+                        <option value="phonepe">PhonePe</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn5">Order</button>
+            </form>
+        </div>
+    </div>
+
+
+    <div id="successModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('successModal')">&times;</span>
+            <h2>Success</h2>
+            <p>Your Order Placed successfully!</p>
+        </div>
+    </div>
+
+
+    <div id="orderDetailsModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('orderDetailsModal')">&times;</span>
+            <h2>Order Details</h2>
+            <p id="orderDetails"></p>
+        </div>
+    </div>
+
+
+    <!-- Start Customer Reviews -->
+    <div class="carousel-container">
+        <input type="radio" name="carousel" id="testimonial1" checked>
+        <input type="radio" name="carousel" id="testimonial2">
+        <input type="radio" name="carousel" id="testimonial3">
+
+        <div class="carousel-inner">
+            <div class="carousel-item">
+                <div class="img-box">
+                    <img src="images/quotations-button.png" alt="Paul Mitchel">
+                </div>
+                <h5 class="mt-4 mb-0"><strong class="text-warning text-uppercase">Paul Mitchel</strong></h5>
+                <h6 class="text-dark m-0">Herbivore Haven Restaurant</h6>
+                <p class="m-0 pt-3">Welcome to Herbivore Haven Restaurant, where our commitment to fresh,
+                    locally-sourced produce is
+                    at the heart of everything we do. Today, we are excited to showcase our exclusive range of
+                    vegetable-based dishes, crafted with the finest ingredients to deliver a delightful and nutritious
+                    dining experience.
+
+                    Our vegetable dishes are a testament to our dedication to health and sustainability. We source our
+                    vegetables from local farmers who practice sustainable farming, ensuring that every bite is not only
+                    delicious but also supports the environment and the local community.
+
+                    Start your culinary journey with our vibrant Seasonal Salad, a medley of the freshest greens,
+                    heirloom tomatoes, crisp cucumbers, and roasted bell peppers, all tossed in our house-made
+                    vinaigrette. Each ingredient is selected at its peak ripeness to ensure maximum flavor and
+                    nutritional value.
+
+                    For a warm and comforting option, try our Roasted Vegetable Soup. This hearty dish features a blend
+                    of root vegetables, such as carrots, parsnips, and sweet potatoes, slow-roasted to bring out their
+                    natural sweetness and then simmered in a fragrant herb broth.
+
+                    Our Vegetable Stir-Fry is a colorful feast for the eyes and the palate. We sauté a mix of broccoli,
+                    snap peas, bell peppers, and mushrooms in a savory soy-ginger sauce, served over a bed of fluffy
+                    jasmine rice. This dish is a perfect balance of flavors and textures, providing a satisfying and
+                    wholesome meal.
+
+                    Indulge in our Grilled Vegetable Platter, where an assortment of seasonal vegetables, including
+                    zucchini, eggplant, and asparagus, are lightly seasoned and expertly grilled to perfection. Paired
+                    with a tangy balsamic glaze, this dish is a celebration of natural flavors and simple, elegant
+                    cooking.
+
+                    For a unique twist, try our Vegetable Paella. This Spanish-inspired dish features a saffron-infused
+                    rice base, studded with a variety of vegetables like artichokes, peas, and roasted red peppers. It’s
+                    a vibrant and flavorful dish that brings a taste of the Mediterranean to your table.</p>
+            </div>
+            <div class="carousel-item">
+                <div class="img-box">
+                    <img src="images/quotations-button.png" alt="Steve Fonsi">
+                </div>
+                <h5 class="mt-4 mb-0"><strong class="text-warning text-uppercase">Steve Fonsi</strong></h5>
+                <h6 class="text-dark m-0">Web Designer</h6>
+                <p class="m-0 pt-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu sem tempor, varius
+                    quam at, luctus dui. Mauris magna metus, dapibus nec turpis vel, semper malesuada ante. Idac
+                    bibendum scelerisque non non purus. Suspendisse varius nibh non aliquet.</p>
+            </div>
+            <div class="carousel-item">
+                <div class="img-box">
+                    <img src="images/quotations-button.png" alt="Daniel Vebar">
+                </div>
+                <h5 class="mt-4 mb-0"><strong class="text-warning text-uppercase">Daniel Vebar</strong></h5>
+                <h6 class="text-dark m-0">SEO Analyst</h6>
+                <p class="m-0 pt-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu sem tempor, varius
+                    quam at, luctus dui. Mauris magna metus, dapibus nec turpis vel, semper malesuada ante. Idac
+                    bibendum scelerisque non non purus. Suspendisse varius nibh non aliquet.</p>
+            </div>
+        </div>
+    </div>
+    <!-- End Customer Reviews -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section company">
+                <h3>Company</h3>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="reservation.html">Reservation</a></li>
+                    <li><a href="about.html">Privacy Policy</a></li>
+                    <li><a href="about.html">Terms & Conditions</a></li>
+                </ul>
+            </div>
+            <div class="footer-section contact">
+                <h3>Contact</h3>
+                <p>Location: KPHB 5th Road Hyderabad</p>
+                <p>Phone: +91 9505791649</p>
+                <p>Email: info@example.com</p>
+                <div class="social-icons">
+                    <a href="#" class="fa fa-facebook">f</a>
+                    <a href="#" class="fa fa-google">G</a>
+                    <a href="#" class="fa fa-linkedin">in</a>
+                </div>
+            </div>
+            <div class="footer-section opening">
+                <h3>OPENING HOURS</h3>
+                <p>Monday: Closed</p>
+                <p>Tue-Wed : 9:Am - 10PM</p>
+                <p>Thu-Fri : 9:Am - 10PM</p>
+                <p>Sat-Sun : 5:PM - 10PM</p>
+            </div>
+            <div class="footer-section newsletter">
+                <h3>Newsletter</h3>
+                <p>Dolor amet sit justo amet elitr clita ipsum elitr est.</p>
+                <input type="email" placeholder="Enter your email">
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© Your Site Name, All Right Reserved. Designed By
+                &nbsp;<span>Laharika,</span>&nbsp;<span>Gayathri,</span>
+                &nbsp;<span>Niharika,</span>&nbsp;<span>Harika.</span></p>
+        </div>
+    </footer>
+    <script src="shared.js"></script>
+</body>

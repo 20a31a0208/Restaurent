@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FOOD DELIVERY</title>
+    <link rel="icon" href="images/quotations-button.png" type="image/x-icon">
+</head>
+
+<body>
+    <header class="top-navbar">
+        <div class="nav">
+            <div class="logo">
+                <li><a class="nav-link" href="index.html"><img src="./images/tab-icon-03.png" alt="icon"></a></li>
+                <h1>Herbivore &nbsp;<b>Haven</b></h1>
+            </div>
+            <ul>
+                <li><a class="nav-link" active href="index.html">HOME</a></li>
+                <li><a class="nav-link" href="menu.html">MENU</a></li>
+                <li><a class="nav-link" href="reservation.html">RESERVATION</a></li>
+                <li><a class="nav-link" href="service.html">SERVICE</a></li>
+                <li><a class="nav-link" href="about.html">ABOUT US</a></li>
+                <li><a class="nav-link" href="contact.html">CONTACT</a></li>
+            </ul>
+            <div class="user-menu">
+                <img src="./images/avt-img.jpg" alt="User Icon" class="user-icon">
+                <div class="dropdown-menu">
+                    <a href="#" onclick="showUserOrders()">Order Details</a>
+                    <a href="#" onclick="showUserBookings()">Reservation</a>
+                    <a href="login.html">Logout</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Start slides -->
+    <div id="slides" class="cover-slides">
+        <div class="slides-container">
+            <div class="slide">
+                <img src="images/bg_1.jpg" alt="img">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h1 class="m-b-20"><strong>Welcome To <br> Herbivore Haven Restaurant</strong></h1>
+                            <p class="m-b-40">See how your users experience your website in realtime or view <br>
+                                trends to see any changes in performance over time.</p>
+                            <button>
+                                <a class="nav-link" href="reservation.html">Reservation</a>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="images/bg_5.jpg" alt="img1">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h1 class="m-b-20"><strong>Welcome To <br> Herbivore Haven Restaurant</strong></h1>
+                            <p class="m-b-40">See how your users experience your website in realtime or view <br>
+                                trends to see any changes in performance over time.</p>
+                            <button>
+                                <a class="nav-link" href="reservation.html">Reservation</a>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="images/slider-03.jpg" alt="img3">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h1 class="m-b-20"><strong>Welcome To <br> Herbivore Haven Restaurant</strong></h1>
+                            <p class="m-b-40">See how your users experience your website in realtime or view <br>
+                                trends to see any changes in performance over time.</p>
+                            <button>
+                                <a class="nav-link" href="reservation.html">Reservation</a>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End slides -->
+
+    <!-- Start About -->
+    <div class="about-section-box">
+        <div class="container">
+            <div class="fill">
+                <div class="text-center">
+                    <div class="inner-column">
+                        <h1>Welcome To <span>Herbivore Haven Restaurant</span></h1>
+                        <p>
+                            Welcome to Herbivore Haven Restaurant, where culinary excellence meets unparalleled
+                            hospitality! As you
+                            step into our restaurant, you embark on a journey of flavors, aromas, and experiences that
+                            will tantalize your senses and leave you craving for more. We are delighted to have you here
+                            and promise an unforgettable dining adventure.
+
+                            At Herbivore Haven Restaurant, we pride ourselves on offering a diverse menu that caters to
+                            every palate.
+                            Our chefs, with their years of expertise and passion for food, curate dishes that blend
+                            traditional flavors with contemporary twists. Whether you're in the mood for a classic dish
+                            or something innovative, we have something that will delight your taste buds.
+                        </p>
+                        <button>
+                            <a class="nav-link" href="reservation.html">Reservation</a>
+                        </button>
+                    </div>
+                </div>
+                <div class="image">
+                    <img src="images/about-img.jpg" alt="" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End About -->
+
+    <!-- Service Start -->
+    <div class="container-xall">
+        <div class="con">
+            <div class="gr-4">
+                <div class="demo" data-wow-delay="0.1s">
+                    <div class="serviced rounded pt-3">
+                        <div class="p-4">
+                            <i class="fa fa-3x fa-user-tie text-primary mb-4"></i>
+                            <h5>Master Chefs</h5>
+                            <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="demo" data-wow-delay="0.3s">
+                    <div class="serviced rounded pt-3">
+                        <div class="p-4">
+                            <i class="fa fa-3x fa-utensils text-primary mb-4"></i>
+                            <h5>Quality Food</h5>
+                            <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="demo" data-wow-delay="0.5s">
+                    <div class="serviced rounded pt-3">
+                        <div class="p-4">
+                            <i class="fa fa-3x fa-cart-plus text-primary mb-4"></i>
+                            <h5>Online Order</h5>
+                            <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="demo" data-wow-delay="0.7s">
+                    <div class="serviced rounded pt-3">
+                        <div class="p-4">
+                            <i class="fa fa-3x fa-headset text-primary mb-4"></i>
+                            <h5>24/7 Service</h5>
+                            <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="demo" data-wow-delay="0.1s">
+                    <div class="serviced rounded pt-3">
+                        <div class="p-4">
+                            <i class="fa fa-3x fa-user-tie text-primary mb-4"></i>
+                            <h5>Reservation</h5>
+                            <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="demo" data-wow-delay="0.3s">
+                    <div class="serviced rounded pt-3">
+                        <div class="p-4">
+                            <i class="fa fa-3x fa-utensils text-primary mb-4"></i>
+                            <h5>Loyalty Program</h5>
+                            <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="demo" data-wow-delay="0.5s">
+                    <div class="serviced rounded pt-3">
+                        <div class="p-4">
+                            <i class="fa fa-3x fa-cart-plus text-primary mb-4"></i>
+                            <h5>Farm-to-Table Freshness</h5>
+                            <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="demo" data-wow-delay="0.7s">
+                    <div class="serviced rounded pt-3">
+                        <div class="p-4">
+                            <i class="fa fa-3x fa-headset text-primary mb-4"></i>
+                            <h5>Catering Services</h5>
+                            <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Service End -->
+</body>
+<footer>
+    <div class="footer-container">
+        <div class="footer-section company">
+            <h3>Company</h3>
+            <ul>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="reservation.html">Reservation</a></li>
+                <li><a href="about.html">Privacy Policy</a></li>
+                <li><a href="about.html">Terms & Conditions</a></li>
+            </ul>
+        </div>
+        <div class="footer-section contact">
+            <h3>Contact</h3>
+            <p>Location: KPHB 5th Road Hyderabad</p>
+            <p>Phone: +91 9505791649</p>
+            <p>Email: info@example.com</p>
+            <div class="social-icons">
+                <a href="#" class="fa fa-facebook">f</a>
+                <a href="#" class="fa fa-google">G</a>
+                <a href="#" class="fa fa-linkedin">in</a>
+            </div>
+        </div>
+        <div class="footer-section opening">
+            <h3>OPENING HOURS</h3>
+            <p>Monday: Closed</p>
+            <p>Tue-Wed : 9:Am - 10PM</p>
+            <p>Thu-Fri : 9:Am - 10PM</p>
+            <p>Sat-Sun : 5:PM - 10PM</p>
+        </div>
+        <div class="footer-section newsletter">
+            <h3>Newsletter</h3>
+            <p>Dolor amet sit justo amet elitr clita ipsum elitr est.</p>
+            <input type="email" placeholder="Enter your email">
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>© Your Site Name, All Right Reserved. Designed By
+            &nbsp;<span>Laharika,</span>&nbsp;<span>Gayathri,</span>
+            &nbsp;<span>Niharika,</span>&nbsp;<span>Harika.</span></p>
+    </div>
+</footer>
+<div id="orderDetailsModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('orderDetailsModal')">&times;</span>
+        <h2>Order Details</h2>
+        <p id="orderDetails"></p>
+    </div>
+</div>
+<script src="shared.js"></script>
+</html>

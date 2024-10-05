@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CONTACT</title>
+    <link rel="icon" href="images/quotations-button.png" type="image/x-icon">
+</head>
+
+<body>
+    <header class="top-navbar">
+        <div class="nav">
+            <div class="logo">
+                <li><a class="nav-link" href="index.html"><img src="./images/tab-icon-03.png" alt="icon"></a></li>
+                <h1>Herbivore &nbsp;<b>Haven</b></h1>
+            </div>
+            <ul>
+                <li><a class="nav-link" href="index.html">HOME</a></li>
+                <li><a class="nav-link" href="menu.html">MENU</a></li>
+                <li><a class="nav-link" href="reservation.html">RESERVATION</a></li>
+                <li><a class="nav-link" href="service.html">SERVICE</a></li>
+                <li><a class="nav-link" href="about.html">ABOUT US</a></li>
+                <li><a class="nav-link" href="contact.html">CONTACT</a></li>
+            </ul>
+            <div class="user-menu">
+                <img src="./images/avt-img.jpg" alt="User Icon" class="user-icon">
+                <div class="dropdown-menu">
+                    <a href="#" onclick="showUserOrders()">Order Details</a>
+                    <a href="#" onclick="showUserBookings()">Reservation</a>
+                    <a href="login.html">Logout</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="hero-header">
+        <div class="servicec">
+            <h1 class="display">Contact Us</h1>
+            <nav aria-label="breadcrumb">
+                <ul class="breadcrumbs">
+                    <li class="breadcrumb-items"><a href="#">Home</a></li>
+                    <li class="breadcrumb-item text-white active" aria-current="page">Contact</li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <div class="container-mll">
+        <div class="con1">
+            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                <h5 class="sectione">Contact us</h5>
+                <h1 class="mahi1">Contact For Any Query</h1>
+            </div>
+        </div>
+        <form id="request" onsubmit="validateData(event)">
+            <div class="rows">
+                <input type="text" placeholder="Your Name" id="contactName" required>
+            </div>
+            <div class="rows">
+                <input type="email" placeholder="Your Email" id="contactEmail" required>
+            </div>
+            <div class="rows">
+                <input type="text" placeholder="Your Message" id="contactMessage" required>
+            </div>
+            <div class="rows">
+                <button class="btn1">SEND MESSAGE</button>
+            </div>
+        </form>
+    </div>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section company">
+                <h3>Company</h3>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="reservation.html">Reservation</a></li>
+                    <li><a href="about.html">Privacy Policy</a></li>
+                    <li><a href="about.html">Terms & Conditions</a></li>
+                </ul>
+            </div>
+            <div class="footer-section contact">
+                <h3>Contact</h3>
+                <p>Location: KPHB 5th Road Hyderabad</p>
+                <p>Phone: +91 9505791649</p>
+                <p>Email: info@example.com</p>
+                <div class="social-icons">
+                    <a href="#" class="fa fa-facebook">f</a>
+                    <a href="#" class="fa fa-google">G</a>
+                    <a href="#" class="fa fa-linkedin">in</a>
+                </div>
+            </div>
+            <div class="footer-section opening">
+                <h3>OPENING HOURS</h3>
+                <p>Monday: Closed</p>
+                <p>Tue-Wed : 9:Am - 10PM</p>
+                <p>Thu-Fri : 9:Am - 10PM</p>
+                <p>Sat-Sun : 5:PM - 10PM</p>
+            </div>
+            <div class="footer-section newsletter">
+                <h3>Newsletter</h3>
+                <p>Dolor amet sit justo amet elitr clita ipsum elitr est.</p>
+                <input type="email" placeholder="Enter your email">
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© Your Site Name, All Right Reserved. Designed By
+                &nbsp;<span>Laharika,</span>&nbsp;<span>Gayathri,</span>
+                &nbsp;<span>Niharika,</span>&nbsp;<span>Harika.</span></p>
+        </div>
+    </footer>
+    <!-- Order Details Modal -->
+    <div id="orderDetailsModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('orderDetailsModal')">&times;</span>
+            <h2>Order Details</h2>
+            <p id="orderDetails"></p>
+        </div>
+    </div>
+    <script src="shared.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOGIN</title>
+</head>
+
+<body>
+    <header class="top-navbars">
+        <div class="navv">
+            <div class="logoo">
+                <div class="blur-bg-overlay"></div>
+                <div class="form-popup">
+                    <div class="form-box login">
+                        <div class="form-details">
+                            <h2>Welcome Back</h2>
+                            <p>Herbivore Haven Restaurant.</p>
+                        </div>
+                    </div>
+                    <div class="containerr">
+                        <div class="wrapperr">
+                            <div class="title"><span>Login Form</span></div>
+                            <form id="loginForm">
+                                <div class="row">
+                                    <i class="fas fa-user"></i>
+                                    <input type="email" id="loginEmail" name="email" required
+                                        placeholder="Email">
+                                </div>
+                                <div class="row">
+                                    <i class="fas fa-lock"></i>
+                                    <input type="password" placeholder="Password" id="loginPassword" required>
+                                </div>
+                                <div class="pass">
+                                    <a href="#">Forgot password?</a>
+                                </div>
+                                <div class="row button">
+                                    <button type="submit" href="index.html">Login</button>
+                                </div>
+                                <div class="signup-link">Not a member? <a href="signup.html">Signup now</a></div>
+                            </form>
+                            <div id="loginErrorMessage" class="error-message"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <script src="login.js"></script>
+</body>
+
+</html>

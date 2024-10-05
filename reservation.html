@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RESERVATION</title>
+    <link rel="icon" href="images/quotations-button.png" type="image/x-icon">
+</head>
+
+<body>
+    <header class="top-navbar">
+        <div class="nav">
+            <div class="logo">
+                <li><a class="nav-link" href="index.html"><img src="./images/tab-icon-03.png" alt="icon"></a></li>
+                <h1>Herbivore &nbsp;<b>Haven</b></h1>
+            </div>
+            <ul>
+                <li><a class="nav-link" href="index.html">HOME</a></li>
+                <li><a class="nav-link" href="menu.html">MENU</a></li>
+                <li><a class="nav-link" href="reservation.html">RESERVATION</a></li>
+                <li><a class="nav-link" href="service.html">SERVICE</a></li>
+                <li><a class="nav-link" href="about.html">ABOUT US</a></li>
+                <li><a class="nav-link" href="contact.html">CONTACT</a></li>
+            </ul>
+            <div class="user-menu">
+                <img src="./images/avt-img.jpg" alt="User Icon" class="user-icon">
+                <div class="dropdown-menu">
+                    <a href="#" onclick="showUserOrders()">Order Details</a>
+                    <a href="#" onclick="showUserBookings()">Reservation</a>
+                    <a href="login.html">Logout</a>
+                </div>
+            </div>
+        </div>
+        <!-- Start All Pages -->
+        <div class="all-page-title1 page-breadcrumb1">
+            <div class="container3 text-center">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1>RESERVATION</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End All Pages -->
+        <div class="paragraph">
+            <h1>RESERVATION</h1>
+            <p>Welcome to Herbivore Haven! We are excited to offer you the convenience of online reservations. Simply
+                visit
+                our website to book a table at your preferred date and time. Enjoy a seamless dining experience with
+                just a
+                few clicks. Secure your spot today and let us treat you to an unforgettable meal. We look forward to
+                serving
+                you!</p>
+        </div>
+
+        <div class="sect">
+            <h1>Book A Table Online</h1>
+            <marquee id="bookingStatus" width="60%" direction="left" height="100px">
+                Loading booking status...
+            </marquee>
+            <div class="form-container">
+                <form id="reservationForm" onsubmit="return validateForm(event)">
+                    <div class="form-section">
+                        <h2>Book a Table</h2>
+                        <label for="reservation-date">Date of Reservation*</label>
+                        <input type="date" id="reservation-date" name="reservation-date" required>
+
+                        <label for="reservation-time">Time of Reservation*</label>
+                        <input type="time" id="reservation-time" name="reservation-time" required min="10:00"
+                            max="23:00">
+
+                        <label for="members">How Many Members*</label>
+                        <select id="members" name="members" required>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </div>
+                    <div class="form-section1">
+                        <h2>Contact Details</h2>
+                        <label for="name">Your Name*</label>
+                        <input type="text" id="name" name="name" required placeholder="Your Name">
+
+                        <label for="email">Your Email*</label>
+                        <input type="email" id="email" name="email" required>
+
+                        <label for="number">Your Number*</label>
+                        <input type="tel" id="number" name="number" required placeholder="Your Number"
+                            pattern="[0-9]{10}" title="Phone number must be 10 digits">
+                    </div>
+                    <div class="btn4">
+                        <button class="btn3" id="bookTableButton">BOOK TABLE</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </header>
+
+    <!-- Booking Details -->
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <span class="close" onclick="closePopup()">&times;</span>
+            <h2 class="details">Booking Details</h2>
+            <div id="booking-details"></div>
+        </div>
+    </div>
+    <!-- Order Details Modal -->
+    <div id="orderDetailsModal" class="modals">
+        <div class="modals-content">
+            <span class="closed" onclick="closeModal('orderDetailsModal')">&times;</span>
+            <h2>Reservation Details</h2>
+            <p id="orderDetails"></p>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section company">
+                <h3>Company</h3>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="reservation.html">Reservation</a></li>
+                    <li><a href="about.html">Privacy Policy</a></li>
+                    <li><a href="about.html">Terms & Conditions</a></li>
+                </ul>
+            </div>
+            <div class="footer-section contact">
+                <h3>Contact</h3>
+                <p>Location: KPHB 5th Road Hyderabad</p>
+                <p>Phone: +91 9505791649</p>
+                <p>Email: info@example.com</p>
+                <div class="social-icons">
+                    <a href="#" class="fa fa-facebook">f</a>
+                    <a href="#" class="fa fa-google">G</a>
+                    <a href="#" class="fa fa-linkedin">in</a>
+                </div>
+            </div>
+            <div class="footer-section opening">
+                <h3>OPENING HOURS</h3>
+                <p>Monday: Closed</p>
+                <p>Tue-Wed : 9:Am - 10PM</p>
+                <p>Thu-Fri : 9:Am - 10PM</p>
+                <p>Sat-Sun : 5:PM - 10PM</p>
+            </div>
+            <div class="footer-section newsletter">
+                <h3>Newsletter</h3>
+                <p>Dolor amet sit justo amet elitr clita ipsum elitr est.</p>
+                <input type="email" placeholder="Enter your email">
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© Your Site Name, All Right Reserved. Designed By
+                &nbsp;<span>Laharika,</span>&nbsp;<span>Gayathri,</span>
+                &nbsp;<span>Niharika,</span>&nbsp;<span>Harika.</span></p>
+        </div>
+    </footer>
+    <script src="shared.js"></script>
+</body>
+
+</html>
